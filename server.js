@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
 const port = process.env.port || 3000;
 const userRoutes = require("./routes/userRoutes");
 const surveyRoutes = require("./routes/surveyRoutes");
-const post = require("./routes/postRoutes")
+const postroutes = require("./routes/postRoutes")
+// const post = require("./routes/postRoutes")
 const AppointmentRoutes = require("./routes/appointmentRoutes");
 const app = express();
 const db = require("mongoose");
@@ -20,7 +21,8 @@ app.use(express.json());
 app.use(userRoutes);
 app.use(surveyRoutes);
 app.use(AppointmentRoutes);
-app.use(post);
+app.use(postroutes);
+// app.use(post);
 const startServer = async () => {
   mongoose.connect(
     "mongodb+srv://anniagg2003:annanay@cluster0.81ccs6o.mongodb.net/",
